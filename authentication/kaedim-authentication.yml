@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: openapi/kaedim-web-api-openapi.yml
+docs: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+summary:
+  types:
+  - apiKey
+  - http
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter: X-API-Key
+  description: Enterprise API key from Settings > API Keys in the Kaedim app.
+  sources:
+  - openapi/kaedim-web-api-openapi.yml
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: JWT obtained via /registerHook, refreshed via /refreshJWT every 12 hours.
+  sources:
+  - openapi/kaedim-web-api-openapi.yml
