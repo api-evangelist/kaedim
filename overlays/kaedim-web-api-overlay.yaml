@@ -1,0 +1,18 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Kaedim Web API
+  version: 1.0.0
+extends: openapi/kaedim-web-api-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-rating: 3
+      x-apievangelist-enriched: '2026-07-19'
+      x-apievangelist-notes: >-
+        Generated from Kaedim's published Web API docs; Enterprise-only, async
+        via signed webhooks. See asyncapi/ for the event surface.
+  - target: $.info
+    update:
+      x-async-surface: asyncapi/kaedim-webhooks-asyncapi.yml
+      x-conventions: conventions/kaedim-conventions.yml
+      x-errors: errors/kaedim-problem-types.yml

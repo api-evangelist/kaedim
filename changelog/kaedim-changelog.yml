@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.kaedim3d.com/dev-logs/releases
+scheme: dated-release-notes
+entries:
+  - date: '2024-09'
+    highlights:
+      - Request Revision update with feedback markers and text input
+      - Priority feature (Enterprise) to mark assets urgent/high priority in the queue
+  - date: '2024-08'
+    highlights:
+      - Pivot point options (object center vs base center)
+      - Art & technical specification fields on the Create page (polycount distribution)
+  - date: '2024-07'
+    highlights:
+      - Scenes feature — upload entire scene images for one-go generation
+  - date: '2024-04'
+    highlights:
+      - Game-ready pipeline — textured, rigged, optimized assets with Level of Detail
+  - date: '2024-03'
+    highlights:
+      - Folders feature; Team functionality with Admin/Editor roles
+      - Marketplace launch (10,000+ ready-to-use 3D assets); $15M Series A announced
+  - date: '2024-01'
+    highlights:
+      - Create page redesign with Learning Center
+      - Image generation does not require credits
+  - date: '2023-12'
+    highlights:
+      - Pre-modifiers — view/download models before modifier application
+  - date: '2023-09'
+    highlights:
+      - Combine feature, PBR texturing beta, merge meshes, LoD batch downloads

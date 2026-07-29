@@ -1,0 +1,14 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+test_mode:
+  supported: true
+  mechanism: >-
+    The /process endpoint accepts an optional `test` boolean. When true, a
+    generation request runs in test mode without consuming credits.
+  field: test
+  applies_to: [processImage]
+notes: >-
+  Kaedim publishes no fixed magic test identifiers or test cards; test mode is a
+  per-request flag on the generation endpoint. No separate sandbox host — the
+  same base URL (https://api.kaedim3d.com/api/v1) serves live and test requests.

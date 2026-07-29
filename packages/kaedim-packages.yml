@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Kaedim
+notes: >-
+  Kaedim publishes no client SDK on npm/PyPI/Maven/NuGet/etc. It ships
+  first-party DCC-tool plugins and a reference API implementation as public
+  GitHub repositories under the Kaedim org. These are the official client
+  integration surface.
+packages:
+  - language: javascript
+    registry: github
+    name: API_Implementation
+    url: https://github.com/Kaedim/API_Implementation
+    official: true
+    kind: reference-implementation
+  - language: csharp
+    registry: github
+    name: unity-customer-plugin
+    url: https://github.com/Kaedim/unity-customer-plugin
+    official: true
+    kind: plugin
+  - language: cpp
+    registry: github
+    name: Unreal-customer-plugin
+    url: https://github.com/Kaedim/Unreal-customer-plugin
+    official: true
+    kind: plugin
+  - language: python
+    registry: github
+    name: Blender-customer-plugin
+    url: https://github.com/Kaedim/Blender-customer-plugin
+    official: true
+    kind: plugin
+  - language: python
+    registry: github
+    name: Cinema4D-customer-plugin
+    url: https://github.com/Kaedim/Cinema4D-customer-plugin
+    official: true
+    kind: plugin
+  - language: powershell
+    registry: github
+    name: Omniverse-customer-plugin
+    url: https://github.com/Kaedim/Omniverse-customer-plugin
+    official: true
+    kind: plugin

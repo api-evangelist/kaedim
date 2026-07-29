@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: openapi/kaedim-web-api-openapi.yml
+notes: >-
+  No official hosted/remote Kaedim MCP server found (searched docs, npm
+  @modelcontextprotocol, MCP registries). Candidate tool list derived one-to-one
+  from the documented Web API operations.
+server:
+  name: kaedim
+  transport: http
+tools:
+  - name: register_hook
+    description: Register an HTTPS webhook endpoint and obtain a JWT.
+    source_operation: openapi/kaedim-web-api-openapi.yml#registerHook
+  - name: process_image
+    description: Submit up to 6 images for 3D asset generation.
+    source_operation: openapi/kaedim-web-api-openapi.yml#processImage
+  - name: fetch_request
+    description: Fetch a single generation request and its model iterations.
+    source_operation: openapi/kaedim-web-api-openapi.yml#fetchRequest
+  - name: fetch_all
+    description: Fetch all generated assets, optionally by date range.
+    source_operation: openapi/kaedim-web-api-openapi.yml#fetchAll
+  - name: fetch_projects
+    description: List projects for a developer.
+    source_operation: openapi/kaedim-web-api-openapi.yml#fetchProjects
+  - name: refresh_jwt
+    description: Refresh the JWT using the refresh token.
+    source_operation: openapi/kaedim-web-api-openapi.yml#refreshJWT

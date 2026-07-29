@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/kaedim-web-api-openapi.yml
+entities:
+  - name: Project
+    id_field: projectID
+    fields: [projectID, name, studioID]
+  - name: Request
+    id_field: requestID
+    fields: [requestID, createdAt, image, image_tags, iterations]
+    description: A generation request tracked from submission through webhook completion.
+  - name: Iteration
+    id_field: iterationID
+    fields: [obj, fbx, glb, gltf, mtl, usd]
+    description: A generated model version with per-format download URLs (expire after 1 hour).
+  - name: Developer
+    id_field: devID
+    description: The Enterprise developer identity carried on every request.
+relationships:
+  - from: Request
+    to: Project
+    kind: belongs_to
+    via: projectID
+  - from: Request
+    to: Iteration
+    kind: has_many
+    via: iterations
+  - from: Request
+    to: Developer
+    kind: belongs_to
+    via: devID
+  - from: Project
+    to: Developer
+    kind: belongs_to
+    via: devID

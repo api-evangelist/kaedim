@@ -1,0 +1,15 @@
+generated: '2026-07-19'
+method: probed
+notes: >-
+  Probed the /.well-known/ discovery surface on the API host and root domain.
+  No documents returned 200; absence recorded as valid data. No pointer emitted.
+hosts:
+  - host: https://api.kaedim3d.com
+    documents:
+      - { path: /.well-known/security.txt, status: 404 }
+      - { path: /.well-known/openid-configuration, status: 404 }
+      - { path: /.well-known/oauth-authorization-server, status: 404 }
+      - { path: /.well-known/api-catalog, status: 404 }
+  - host: https://www.kaedim3d.com
+    documents:
+      - { path: /.well-known/security.txt, status: 200, note: "SPA HTML fallback, not a valid RFC 9116 security.txt" }

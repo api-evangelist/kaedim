@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.kaedim3d.com/dev-logs/releases
+versioning:
+  scheme: uri-path
+  current: v1
+  base: https://api.kaedim3d.com/api/v1
+tokens:
+  jwt_expiry: 12 hours
+  download_link_expiry: 1 hour
+status_page: https://github.com/Kaedim/kaedim_status
+release_notes: https://docs.kaedim3d.com/dev-logs/releases
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation/Sunset policy documented.
+deprecated_operations: []

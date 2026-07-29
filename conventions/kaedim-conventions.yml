@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+authentication:
+  style: api-key + bearer-jwt
+  api_key_header: X-API-Key
+  bearer: "JWT (Authorization: Bearer), 12-hour expiry, refreshed via /refreshJWT"
+  dev_id: devID required in body/query on every call
+idempotency:
+  supported: false
+  notes: No idempotency key documented; generation is tracked by returned requestID.
+pagination:
+  style: date-range
+  params: [start, end]
+  format: MM-DD-YYYY
+  applies_to: [fetchAll]
+async:
+  model: webhook
+  notes: >-
+    Generation is asynchronous (typically 10-15 minutes). Register an HTTPS
+    endpoint via /registerHook; results are POSTed to it. Also pollable via
+    /fetchRequest by requestID.
+  signature_header: kaedim-signature
+  signature_scheme: HMAC-SHA256 over timestamp + UTF-8 JSON payload, timing-safe compare
+versioning:
+  scheme: uri-path
+  current: v1
+error_envelope:
+  shape: json { status, message }
+  problem_json: false
+download_links:
+  expiry: 1 hour
+media_types:
+  request: [application/json, multipart/form-data]
+  output_formats: [obj, fbx, glb, gltf, mtl, usd]
+cross_reference:
+  errors: errors/kaedim-problem-types.yml
+  authentication: authentication/kaedim-authentication.yml
+  lifecycle: lifecycle/kaedim-lifecycle.yml
+  webhooks: asyncapi/kaedim-webhooks-asyncapi.yml

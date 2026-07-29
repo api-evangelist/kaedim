@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/kaedim-web-api-openapi.yml
+format: http-status
+notes: >-
+  Kaedim's Web API does not document an RFC 9457 problem+json envelope; errors
+  are returned as HTTP status codes with a JSON status/message body. Derived
+  from the documented 4xx responses across operations.
+problems:
+  - status: 400
+    title: Invalid payload or headers
+    remediation: Verify required headers (X-API-Key, Authorization Bearer JWT) and body/form fields.
+    source_operation: openapi/kaedim-web-api-openapi.yml#processImage
+  - status: 400
+    title: Invalid credentials
+    remediation: Ensure devID and refresh-token are correct when refreshing the JWT.
+    source_operation: openapi/kaedim-web-api-openapi.yml#refreshJWT
+  - status: 404
+    title: User does not exist
+    remediation: Confirm the devID belongs to a provisioned Enterprise developer.
+    source_operation: openapi/kaedim-web-api-openapi.yml#registerHook
+  - status: 406
+    title: Invalid level of quality
+    remediation: LoQ must be one of standard, high, or ultra.
+    source_operation: openapi/kaedim-web-api-openapi.yml#processImage

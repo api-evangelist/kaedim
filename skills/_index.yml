@@ -1,0 +1,8 @@
+generated: '2026-07-19'
+method: generated
+source: openapi/kaedim-web-api-openapi.yml
+skills:
+  - file: kaedim-generate-3d-asset.md
+    name: Generate a 3D asset from images with Kaedim
+    api: openapi/kaedim-web-api-openapi.yml
+    operations: [registerHook, processImage, fetchRequest, refreshJWT]

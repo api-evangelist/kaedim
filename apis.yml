@@ -1,22 +1,192 @@
 aid: kaedim
 name: Kaedim
-description: Kaedim is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Kaedim is an AI 3D asset generation company (backed by a16z) that turns 2D
+  images — photos, sketches and concept art — into production-ready 3D models
+  for games, e-commerce and simulation. The Enterprise Web API lets developers
+  integrate Kaedim's 2D-to-3D pipeline into internal modelling workflows and
+  user-generated-content products: submit up to six images at a chosen level of
+  quality, track generation by requestID, receive results via signed webhooks,
+  and download models in obj, fbx, glb, gltf, mtl and usd formats. Kaedim also
+  ships first-party plugins for Unity, Unreal, Blender, Cinema 4D and NVIDIA
+  Omniverse. Authentication uses an X-API-Key header plus a 12-hour JWT bearer
+  token; generation is asynchronous and completes in roughly 10-15 minutes.
 url: https://raw.githubusercontent.com/api-evangelist/kaedim/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-real-api
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.kaedim3d.com/favicon.ico
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- 3D
+- Artificial Intelligence
+- Generative AI
+- Gaming
+- 3D Models
+- Asset Generation
+- Content Generation
+- Machine Learning
+apis:
+- aid: kaedim:kaedim-assets-api
+  name: Kaedim Assets API
+  description: Fetch generated assets and projects
+  humanURL: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+  baseURL: https://api.kaedim3d.com/api/v1
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/kaedim-assets-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/kaedim-webhooks-asyncapi.yml
+  - type: Webhooks
+    url: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-hooks
+  - type: Authentication
+    url: authentication/kaedim-authentication.yml
+  - type: ErrorCatalog
+    url: errors/kaedim-problem-types.yml
+  - type: DataModel
+    url: data-model/kaedim-data-model.yml
+- aid: kaedim:kaedim-auth-api
+  name: Kaedim Auth API
+  description: Token refresh
+  humanURL: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+  baseURL: https://api.kaedim3d.com/api/v1
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/kaedim-auth-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/kaedim-webhooks-asyncapi.yml
+  - type: Webhooks
+    url: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-hooks
+  - type: Authentication
+    url: authentication/kaedim-authentication.yml
+  - type: ErrorCatalog
+    url: errors/kaedim-problem-types.yml
+  - type: DataModel
+    url: data-model/kaedim-data-model.yml
+- aid: kaedim:kaedim-generation-api
+  name: Kaedim Generation API
+  description: Submit images for 3D asset generation
+  humanURL: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+  baseURL: https://api.kaedim3d.com/api/v1
+  tags:
+  - Generation
+  properties:
+  - type: OpenAPI
+    url: openapi/kaedim-generation-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/kaedim-webhooks-asyncapi.yml
+  - type: Webhooks
+    url: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-hooks
+  - type: Authentication
+    url: authentication/kaedim-authentication.yml
+  - type: ErrorCatalog
+    url: errors/kaedim-problem-types.yml
+  - type: DataModel
+    url: data-model/kaedim-data-model.yml
+- aid: kaedim:kaedim-webhooks-api
+  name: Kaedim Webhooks API
+  description: Register a webhook endpoint and obtain a JWT
+  humanURL: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+  baseURL: https://api.kaedim3d.com/api/v1
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/kaedim-webhooks-api-openapi.yml
+  - type: AsyncAPI
+    url: asyncapi/kaedim-webhooks-asyncapi.yml
+  - type: Webhooks
+    url: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-hooks
+  - type: Authentication
+    url: authentication/kaedim-authentication.yml
+  - type: ErrorCatalog
+    url: errors/kaedim-problem-types.yml
+  - type: DataModel
+    url: data-model/kaedim-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/kaedim-domain-security.yml
+- type: Authentication
+  url: authentication/kaedim-authentication.yml
+- type: Conventions
+  url: conventions/kaedim-conventions.yml
+- type: AsyncAPI
+  url: asyncapi/kaedim-webhooks-asyncapi.yml
+- type: Webhooks
+  url: asyncapi/kaedim-webhooks-asyncapi.yml
+- type: ErrorCatalog
+  url: errors/kaedim-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/kaedim-lifecycle.yml
+- type: StatusPage
+  url: https://github.com/Kaedim/kaedim_status
+- type: ChangeLog
+  url: changelog/kaedim-changelog.yml
+- type: MCPServer
+  url: mcp/kaedim-mcp.yml
+- type: LLMsTxt
+  url: llms/kaedim-llms.txt
+- type: Packages
+  url: packages/kaedim-packages.yml
+- type: SDKs
+  url: packages/kaedim-packages.yml
+- type: DataModel
+  url: data-model/kaedim-data-model.yml
+- type: Sandbox
+  url: sandbox/kaedim-sandbox.yml
+- type: Conformance
+  url: conformance/kaedim-conformance.yml
+- type: Compliance
+  url: https://www.kaedim3d.com/privacy
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Overlay
+  url: overlays/kaedim-web-api-overlay.yaml
+- type: DeveloperPortal
+  url: https://docs.kaedim3d.com
+- type: Documentation
+  url: https://docs.kaedim3d.com
+- type: APIReference
+  url: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
+- type: GettingStarted
+  url: https://docs.kaedim3d.com/welcome/get-started/quick-start
+- type: GitHubOrganization
+  url: https://github.com/Kaedim
+- type: PrivacyPolicy
+  url: https://www.kaedim3d.com/privacy
+- type: SignUp
+  url: https://docs.kaedim3d.com/welcome/get-started/sign-up
+- type: Website
+  url: https://www.kaedim3d.com
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

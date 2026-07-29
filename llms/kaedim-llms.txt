@@ -1,0 +1,111 @@
+# Kaedim
+
+## Kaedim
+
+- [Kaedim Documentation](https://docs.kaedim3d.com/kaedim-documentation.md): Welcome to Kaedim’s documentation, we are here to help you get started!
+- [How Kaedim Works](https://docs.kaedim3d.com/welcome/how-kaedim-works.md): A behind the scenes look at Kaedim's 3D model pipeline
+- [Get Started](https://docs.kaedim3d.com/welcome/get-started.md): Start creating today.
+- [Quick Start](https://docs.kaedim3d.com/welcome/get-started/quick-start.md): How to create your first 3D asset with Kaedim.
+- [Sign-up](https://docs.kaedim3d.com/welcome/get-started/sign-up.md): How to Sign-up for our product
+- [Sign-in](https://docs.kaedim3d.com/welcome/get-started/sign-in.md)
+- [Showcase](https://docs.kaedim3d.com/welcome/get-started/showcase.md)
+- [Generation Examples](https://docs.kaedim3d.com/welcome/get-started/generation-examples.md)
+- [Prototype Asset Examples](https://docs.kaedim3d.com/welcome/get-started/generation-examples/prototype-asset-examples.md)
+- [Game-Ready Asset Examples](https://docs.kaedim3d.com/welcome/get-started/generation-examples/game-ready-asset-examples.md)
+- [FAQ](https://docs.kaedim3d.com/welcome/faq.md)
+- [Create Page](https://docs.kaedim3d.com/creating-assets/create-page.md)
+- [Generate Image](https://docs.kaedim3d.com/creating-assets/create-page/generate-image.md)
+- [Polycount](https://docs.kaedim3d.com/creating-assets/create-page/polycount.md)
+- [Input Guidelines](https://docs.kaedim3d.com/creating-assets/input-guidelines.md): Asset Creation Guidelines
+- [Input Image Examples](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples.md)
+- [Furniture](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/furniture.md)
+- [Vehicles](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/vehicles.md)
+- [Characters](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/characters.md)
+- [Clothing](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/clothing.md)
+- [Accessories](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/accessories.md)
+- [Products](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/products.md)
+- [Structures](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/structures.md)
+- [Stylised Trees](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/stylised-trees.md)
+- [Scenes](https://docs.kaedim3d.com/creating-assets/input-guidelines/input-image-examples/scenes.md)
+- [Game-Ready Assets](https://docs.kaedim3d.com/creating-assets/game-ready-assets.md)
+- [Markups](https://docs.kaedim3d.com/creating-assets/game-ready-assets/markups.md)
+- [Upload Base Model](https://docs.kaedim3d.com/creating-assets/game-ready-assets/upload-base-model.md)
+- [Block Models](https://docs.kaedim3d.com/creating-assets/game-ready-assets/block-models.md)
+- [Stages of a Game-Ready Asset](https://docs.kaedim3d.com/creating-assets/game-ready-assets/stages-of-a-game-ready-asset.md)
+- [Prototype Assets](https://docs.kaedim3d.com/creating-assets/prototype-assets.md)
+- [Manual Fill Colour](https://docs.kaedim3d.com/creating-assets/prototype-assets/manual-fill-colour.md)
+- [Upgrade to Game-Ready](https://docs.kaedim3d.com/creating-assets/prototype-assets/upgrade-to-game-ready.md)
+- [Assets Page](https://docs.kaedim3d.com/creating-assets/assets-page.md): Where all your generated assets will live.
+- [Asset Management](https://docs.kaedim3d.com/creating-assets/assets-page/asset-management.md): Organise and manage your Kaedim assets
+- [Asset Types](https://docs.kaedim3d.com/creating-assets/asset-types.md)
+- [Upload a 3D Model](https://docs.kaedim3d.com/creating-assets/upload-a-3d-model.md)
+- [3D Viewer](https://docs.kaedim3d.com/reviewing-assets/3d-viewer.md): The 3D viewers give you the ability to compare the different versions of your asset.
+- [Lighting/Display Options](https://docs.kaedim3d.com/reviewing-assets/3d-viewer/lighting-display-options.md)
+- [Outliner](https://docs.kaedim3d.com/reviewing-assets/3d-viewer/outliner.md)
+- [Geometry Details](https://docs.kaedim3d.com/reviewing-assets/3d-viewer/geometry-details.md)
+- [Select Meshes](https://docs.kaedim3d.com/reviewing-assets/3d-viewer/select-meshes.md)
+- [Model Views](https://docs.kaedim3d.com/reviewing-assets/3d-viewer/model-views.md)
+- [Show Rig](https://docs.kaedim3d.com/reviewing-assets/3d-viewer/show-rig.md)
+- [Show UV/Texture Maps](https://docs.kaedim3d.com/reviewing-assets/3d-viewer/show-uv-texture-maps.md)
+- [UV Viewer](https://docs.kaedim3d.com/reviewing-assets/uv-viewer.md)
+- [Request Revisions](https://docs.kaedim3d.com/reviewing-assets/request-revisions.md)
+- [Request Revisions for Prototype Assets](https://docs.kaedim3d.com/reviewing-assets/request-revisions/request-revisions-for-prototype-assets.md)
+- [Request Revisions](https://docs.kaedim3d.com/reviewing-assets/request-revisions/request-revisions.md)
+- [Edit Asset Settings](https://docs.kaedim3d.com/reviewing-assets/request-revisions/edit-asset-settings.md)
+- [Upgrade Quality](https://docs.kaedim3d.com/reviewing-assets/request-revisions/upgrade-quality.md)
+- [Revision Details](https://docs.kaedim3d.com/reviewing-assets/request-revisions/revision-details.md)
+- [Upload Version (Game-Ready)](https://docs.kaedim3d.com/reviewing-assets/request-revisions/upload-version-game-ready.md)
+- [Branching](https://docs.kaedim3d.com/reviewing-assets/branching.md)
+- [Asset Status](https://docs.kaedim3d.com/managing-assets/asset-status.md)
+- [Exporting Assets](https://docs.kaedim3d.com/managing-assets/exporting-assets.md)
+- [Download](https://docs.kaedim3d.com/managing-assets/exporting-assets/download.md)
+- [Share](https://docs.kaedim3d.com/managing-assets/exporting-assets/share.md)
+- [Removing Assets](https://docs.kaedim3d.com/removing-assets.md)
+- [Cancel](https://docs.kaedim3d.com/removing-assets/cancel.md)
+- [Delete](https://docs.kaedim3d.com/removing-assets/delete.md)
+- [Groups](https://docs.kaedim3d.com/groups.md)
+- [Tabs](https://docs.kaedim3d.com/tabs.md)
+- [Filters](https://docs.kaedim3d.com/filters.md)
+- [Notifications](https://docs.kaedim3d.com/notifications.md)
+- [Custom Styles](https://docs.kaedim3d.com/enterprise-features/custom-styles.md)
+- [Scene Functionality](https://docs.kaedim3d.com/enterprise-features/scene-functionality.md)
+- [Priority Level](https://docs.kaedim3d.com/enterprise-features/priority-level.md)
+- [Texel Density Inspector](https://docs.kaedim3d.com/enterprise-features/texel-density-inspector.md)
+- [Team Functionality](https://docs.kaedim3d.com/enterprise-features/team-functionality.md): The team functionality allows you to collaborate with and manage team members by adding them to your team workspace.
+- [Inviting Team Members](https://docs.kaedim3d.com/enterprise-features/team-functionality/inviting-team-members.md)
+- [Permissions & Roles](https://docs.kaedim3d.com/enterprise-features/team-functionality/permissions-and-roles.md)
+- [Setting Up a Studio](https://docs.kaedim3d.com/enterprise-features/team-functionality/setting-up-a-studio.md)
+- [Custom Integrations](https://docs.kaedim3d.com/enterprise-features/custom-integrations.md)
+- [APIs](https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis.md)
+- [Web API](https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api.md)
+- [Web Hooks](https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-hooks.md)
+- [Plugins](https://docs.kaedim3d.com/enterprise-features/custom-integrations/plugins.md)
+- [Omniverse](https://docs.kaedim3d.com/enterprise-features/custom-integrations/plugins/omniverse.md)
+- [Unity](https://docs.kaedim3d.com/enterprise-features/custom-integrations/plugins/unity.md)
+- [Blender](https://docs.kaedim3d.com/enterprise-features/custom-integrations/plugins/blender.md)
+- [Unreal Engine](https://docs.kaedim3d.com/enterprise-features/custom-integrations/plugins/unreal-engine.md)
+- [Settings](https://docs.kaedim3d.com/admin/settings.md)
+- [Change Subscription](https://docs.kaedim3d.com/admin/settings/change-subscription.md)
+- [Billing](https://docs.kaedim3d.com/admin/settings/billing.md)
+- [Invoices](https://docs.kaedim3d.com/admin/settings/billing/invoices.md)
+- [Updating Payment Method](https://docs.kaedim3d.com/admin/settings/billing/updating-payment-method.md)
+- [Notification Settings](https://docs.kaedim3d.com/admin/settings/notification-settings.md)
+- [Account Settings](https://docs.kaedim3d.com/admin/settings/account-settings.md)
+- [Releases](https://docs.kaedim3d.com/dev-logs/releases.md): Stay up to date on all our latest features
+- [Upcoming Features](https://docs.kaedim3d.com/dev-logs/upcoming-features.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.kaedim3d.com/kaedim-documentation.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

@@ -1,0 +1,20 @@
+{
+  "provider": "kaedim",
+  "sources": [
+    "kaedim-assets-api-openapi.yml",
+    "kaedim-auth-api-openapi.yml",
+    "kaedim-generation-api-openapi.yml",
+    "kaedim-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "kaedim-assets-api-openapi.yml",
+    "kaedim-auth-api-openapi.yml",
+    "kaedim-generation-api-openapi.yml",
+    "kaedim-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
