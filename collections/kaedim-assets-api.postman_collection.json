@@ -1,0 +1,367 @@
+{
+  "item": [
+    {
+      "id": "88dfd6a6-9792-4f6d-849e-5d7121ee1089",
+      "name": "Assets",
+      "description": {
+        "content": "Fetch generated assets and projects",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06757331-e973-4d7e-8d31-f1201aef74e5",
+          "name": "Fetch a single generation request",
+          "request": {
+            "name": "Fetch a single generation request",
+            "description": {
+              "content": "Returns the status and generated model iterations for one requestID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "fetchRequest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "devID",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "requestID",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "studioID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "64670c81-9602-49dd-ac83-6a0cf4536019",
+              "name": "Request details with model iterations.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "fetchRequest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "devID",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "requestID",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "studioID",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"requestID\": \"string\",\n  \"createdAt\": \"string\",\n  \"image\": \"https://wuGRTvvoATiSDH.yzbELGqAU5JAHKkhNZ8UUy,r0bz\",\n  \"image_tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"iterations\": [\n    {\n      \"obj\": \"http://vVPQRyzGwvCKSuFXicJiTJIYfpDKSUkkA.luwmiJd5O2BpWHg6+10hiAprOZ5U6NBThbDYlMoqd93gV2VDWpiof\",\n      \"fbx\": \"http://citnQ.fuiafMw,5so14o.UNztqBLuaC6jbdfbm\",\n      \"glb\": \"http://UMvKeQ.aqqrgn1UxeddKlQcBik4eko4gaJaa67MSH3D-IualIcoIRs87Ix.YMxod\",\n      \"gltf\": \"https://UOxZJ.oyrD,76dPVVbP2sQyyLzFooYDV-wmRn5nv3.Wc+Pbc0H2tZEK0tEdsPMZBbExR,SyE6Dz+\",\n      \"mtl\": \"https://LpasHVquzKnxGJXcCFVlL.xoo.gbIsq.EDYYEXLVNvhTaaINqQK\",\n      \"usd\": \"https://zChsXOUhiJ.dnkbawqTA+fifXbya2aTSq,kcW9ZqBaQVbe25+hidOGsFM-BeVG1rhwRAQ7\"\n    },\n    {\n      \"obj\": \"https://fSiJSpedqNhP.dzwhgrbXqHbdtorFA0,HCgmkjQBwRSao9W.0mY\",\n      \"fbx\": \"http://qPBWmqEkDWTgv.gbluAzbvyMQ.PLgJtAielFjVVPrWSjBz\",\n      \"glb\": \"https://iAAUrthLmMnMfQNMyklZ.jqWKIUK0-wNJr7K1zmtIGHyqdk6IsHpOv0tTO5I\",\n      \"gltf\": \"https://MEuUnwGxxPcplrHZLEnHFuIMskPwbNM.nqoLRdx3RYd1-PL\",\n      \"mtl\": \"https://lODvGvQDbnxvOdC.zhiDRCWc6icVHkOA0yzRyvnKSY+\",\n      \"usd\": \"http://VMYlZOKtSoVWknDLdyYgVfpN.oblnbxxr\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4de47fb1-40f8-4aa8-865b-c8f5d0a0dd36",
+          "name": "Fetch all assets",
+          "request": {
+            "name": "Fetch all assets",
+            "description": {
+              "content": "Returns all generated assets, optionally filtered by a date range.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "fetchAll"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "devID",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "<string>",
+                  "description": "Start date, format MM-DD-YYYY."
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>",
+                  "description": "End date, format MM-DD-YYYY."
+                },
+                {
+                  "disabled": false,
+                  "key": "studioID",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a2d5a591-d2b4-4b3c-9b7d-acf97e954a59",
+              "name": "Array of assets with iterations.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "fetchAll"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "devID",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "studioID",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"assets\": [\n    {\n      \"requestID\": \"string\",\n      \"createdAt\": \"string\",\n      \"image\": \"https://kNsoWjfyqdwMYReFwHQvHO.jbyIdqrQ7gK9RDVtGUgJ0Zxo0Reo0ND-GGRkqlsn8h7cqBpzbj.3mxeVcr9UUtG\",\n      \"image_tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"iterations\": [\n        {\n          \"obj\": \"http://GWelTMKkAGn.eiuPSSKntkaJ4i+RY6-Nk3krp4KNsj4ftV3eYsF1\",\n          \"fbx\": \"http://dmFqvffmX.wdtslSNzbq\",\n          \"glb\": \"https://ogeFJGgE.cib0sIfG\",\n          \"gltf\": \"http://DRBrSUUlcADDGHoGHwMGTfOGti.fvtaYduFQD,Pt,RQ6y+BDlafLo6E0N9CUwV4Hfql\",\n          \"mtl\": \"https://OjYBxKIbWp.moxCB4\",\n          \"usd\": \"http://RxxdckAvDVUwgtfrjkCce.roqvRXQkiUNBqzUha83Uj9V1LCxiVVQtAxknXbtb\"\n        },\n        {\n          \"obj\": \"https://CGDhPtTabGLHEWpqafIyGBCBts.soTa2eP,wBGmbW1TGp5rKCl1FpZTkZhFMZ8urUP,2-Oayiz6TspzBZEd\",\n          \"fbx\": \"http://AKQHQzJquXHWyiKwlDXmvUFlHEaq.sxyzrJFO55C7BuPxNcr0ttlNVedX0XmdrFuBUF02u9Hmmna+XK+pDORYNiSl+tTuN6+j.rJcF\",\n          \"glb\": \"https://DVuELAup.shtx305Q\",\n          \"gltf\": \"https://VriRHaKMeNMtFzHfERskgbIjuPN.juyIb8+g9m26m-WhRtDshlt5Gl7mKvu,.cMb9iAwoe24ZTSX8pc8\",\n          \"mtl\": \"https://PIJPubJIctJmFmvcqbvOybmjnNSoTz.wayv.4XfIvgqVgpMsINi2EEtZVnseVTvkB9fVZELO\",\n          \"usd\": \"http://CWeMngAHWFpErTHHmSFYsaxWGwFJvc.ssC3,ItWsGBZ1Dfn47BLVZ-py.o1KSS8mLzEWSVQMAReG8JltDyymh-iB-uc\"\n        }\n      ]\n    },\n    {\n      \"requestID\": \"string\",\n      \"createdAt\": \"string\",\n      \"image\": \"http://ZGQmFzPnkFTNBQzypNWaQH.ipKTp,qtD,6R\",\n      \"image_tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"iterations\": [\n        {\n          \"obj\": \"http://vhxV.jawtBNtoOCU5u0M-aHpRliERgidHX.fjFCccmXYZIPXaGZgnECuH5XaFOs\",\n          \"fbx\": \"https://tINhFZHFwxzsxzEHILMccFyzk.mhidWeZ-WJbxMcZAcko-9m1EbH2Oh\",\n          \"glb\": \"https://NiFKuHVSEdmfydmYLfAWMYlij.ntkhXJEhCJaNpk9gOgDPfv5tyCkcfyJhcP\",\n          \"gltf\": \"https://nSKuyzFvhDpENy.iunsAoq5e66wVDpqi.TcX,54qLEItMy7mlzGKy.7d\",\n          \"mtl\": \"http://qLFEw.ymxtsgO.EtQoZ\",\n          \"usd\": \"http://VTiaIq.shbmnOpj3q-7NozJKr47Org.JGCRnXOL\"\n        },\n        {\n          \"obj\": \"http://RUQJoCXoidKQSBUaIpxtHqDT.woplLXj-\",\n          \"fbx\": \"http://JcfwnbRrBa.qulpKAjpOlRDtUt697+mUhVHplzZZIKXgrTfiEYgao,ipYPbgGRSZ\",\n          \"glb\": \"https://ZMgyUf.jbqF-IHfn9IzPzQUOfp18OheHB9nwsI6I0gI\",\n          \"gltf\": \"https://iHwcloAjj.gmgaDba4\",\n          \"mtl\": \"https://vghyriUhFpYGjOdv.rvEggYGht.qe0HR9euSN1Z.w2nwmPTV9lPui0Kb9MROtmjv\",\n          \"usd\": \"https://kfLIVkVpxpZxpLorlbaAPp.gpnSQ+N+oxlM-EJZdZcCQrafT,rdraQNjVA+E4zbzq20hMUkn\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0fe71cb3-fd83-47ff-bcb1-07232797471a",
+          "name": "Fetch projects",
+          "request": {
+            "name": "Fetch projects",
+            "description": {
+              "content": "Returns the list of projects for a developer.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "fetchProjects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "devID",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0b072cb4-5450-44d9-a43e-a83bf5a9c962",
+              "name": "Array of projects.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "fetchProjects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "devID",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"string\",\n  \"message\": [\n    {\n      \"projectID\": \"string\",\n      \"name\": \"string\",\n      \"studioID\": \"string\"\n    },\n    {\n      \"projectID\": \"string\",\n      \"name\": \"string\",\n      \"studioID\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.kaedim3d.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "16358d50-6be1-428c-9871-a86a88bbeda6",
+    "name": "Kaedim Web Assets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Kaedim Web API lets Enterprise customers integrate Kaedim's AI 2D-to-3D asset generation into internal 3D modelling pipelines and user-facing applications. Submit images (photos, sketches, concept art), poll or receive results via webhook, and download generated models in obj, fbx, glb, gltf, mtl and usd formats. This description is generated by the API Evangelist enrichment pipeline from Kaedim's published Web API documentation; it is not an official Kaedim OpenAPI definition.\n\nContact Support:\n Name: Kaedim Support\n Email: support@kaedim3d.com",
+      "type": "text/plain"
+    }
+  }
+}

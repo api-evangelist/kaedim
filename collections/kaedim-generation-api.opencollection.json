@@ -1,0 +1,103 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kaedim Web Assets Generation API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-Key",
+      "value": "{{X-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Generation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit images for 3D generation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.kaedim3d.com/api/v1/process",
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "devID",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "imageUrls",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "images",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "LoQ",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "test",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "polycount",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "height",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "width",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "depth",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "projectID",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "studioID",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-API-Key",
+              "value": "{{X-API-Key}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Submits up to 6 images (5MB each) for 3D asset generation at a chosen level of quality. Returns a requestID to track the generation, which is delivered asynchronously via the registered webhook."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

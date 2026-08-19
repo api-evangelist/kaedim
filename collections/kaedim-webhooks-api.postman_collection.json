@@ -1,0 +1,211 @@
+{
+  "item": [
+    {
+      "id": "47073208-ff97-40e3-8303-a1c7d3217f2f",
+      "name": "Webhooks",
+      "description": {
+        "content": "Register a webhook endpoint and obtain a JWT",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "268b6ed2-a293-4ed8-b010-2f9ddfe4c619",
+          "name": "Register a webhook endpoint",
+          "request": {
+            "name": "Register a webhook endpoint",
+            "description": {
+              "content": "Registers an HTTPS webhook destination for a developer and returns the JWT used to authorize generation and fetch requests.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "registerHook"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"devID\": \"<string>\",\n  \"destination\": \"<uri>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0c5fbc7b-16bf-414b-9547-756a6b3d64d1",
+              "name": "Webhook registered; returns a JWT.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "registerHook"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"devID\": \"<string>\",\n  \"destination\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"string\",\n  \"message\": \"string\",\n  \"jwt\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "53588f6d-6ae6-4ee5-b6cb-8b9af2a6fad2",
+              "name": "User does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "registerHook"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"devID\": \"<string>\",\n  \"destination\": \"<uri>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.kaedim3d.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d10aef33-56d4-4482-873a-825bb7e35c24",
+    "name": "Kaedim Web Assets Webhooks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Kaedim Web API lets Enterprise customers integrate Kaedim's AI 2D-to-3D asset generation into internal 3D modelling pipelines and user-facing applications. Submit images (photos, sketches, concept art), poll or receive results via webhook, and download generated models in obj, fbx, glb, gltf, mtl and usd formats. This description is generated by the API Evangelist enrichment pipeline from Kaedim's published Web API documentation; it is not an official Kaedim OpenAPI definition.\n\nContact Support:\n Name: Kaedim Support\n Email: support@kaedim3d.com",
+      "type": "text/plain"
+    }
+  }
+}

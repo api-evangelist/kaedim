@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kaedim Web Assets Auth API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-Key",
+      "value": "{{X-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Auth",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Refresh JWT",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.kaedim3d.com/api/v1/refreshJWT",
+            "headers": [
+              {
+                "name": "refresh-token",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-API-Key",
+              "value": "{{X-API-Key}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Generates a new JWT using the refresh token. JWTs expire after 12 hours."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

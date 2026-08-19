@@ -1,0 +1,107 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kaedim Web Assets API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-API-Key",
+      "value": "{{X-API-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetch a single generation request",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.kaedim3d.com/api/v1/fetchRequest",
+            "params": [
+              {
+                "name": "devID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "requestID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "studioID",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns the status and generated model iterations for one requestID."
+        },
+        {
+          "info": {
+            "name": "Fetch all assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.kaedim3d.com/api/v1/fetchAll",
+            "params": [
+              {
+                "name": "devID",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Start date, format MM-DD-YYYY."
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query",
+                "description": "End date, format MM-DD-YYYY."
+              },
+              {
+                "name": "studioID",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns all generated assets, optionally filtered by a date range."
+        },
+        {
+          "info": {
+            "name": "Fetch projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.kaedim3d.com/api/v1/fetchProjects",
+            "params": [
+              {
+                "name": "devID",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns the list of projects for a developer."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,605 @@
+{
+  "item": [
+    {
+      "id": "7c11a94c-12d5-46ba-bc90-bbf005d0ab3a",
+      "name": "Generation",
+      "description": {
+        "content": "Submit images for 3D asset generation",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eb13a67a-2387-4b90-9081-b2e2985f08aa",
+          "name": "Submit images for 3D generation",
+          "request": {
+            "name": "Submit images for 3D generation",
+            "description": {
+              "content": "Submits up to 6 images (5MB each) for 3D asset generation at a chosen level of quality. Returns a requestID to track the generation, which is delivered asynchronously via the registered webhook.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "process"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-API-Key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "devID",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) "
+                },
+                {
+                  "key": "LoQ",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) Level of quality. (This can only be one of standard,high,ultra)"
+                },
+                {
+                  "key": "imageUrls",
+                  "value": "[\"<uri>\",\"<uri>\"]",
+                  "type": "text",
+                  "description": "Up to 6 image URLs (mutually exclusive with images)."
+                },
+                {
+                  "key": "images",
+                  "value": "[\"<binary>\",\"<binary>\"]",
+                  "type": "text",
+                  "description": "Up to 6 uploaded images, 5MB limit each."
+                },
+                {
+                  "key": "test",
+                  "value": "<boolean>",
+                  "type": "text",
+                  "description": "Run in test mode without consuming credits."
+                },
+                {
+                  "key": "polycount",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "height",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Default 200 (cm)."
+                },
+                {
+                  "key": "width",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "depth",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "projectID",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "studioID",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "146b3b33-1ad2-4964-803b-f23f7138660f",
+              "name": "Generation request accepted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "process"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "devID",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) Level of quality. (This can only be one of standard,high,ultra)",
+                        "type": "text/plain"
+                      },
+                      "key": "LoQ",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Up to 6 image URLs (mutually exclusive with images).",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrls",
+                      "value": "[\"<uri>\",\"<uri>\"]",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Up to 6 uploaded images, 5MB limit each.",
+                        "type": "text/plain"
+                      },
+                      "key": "images",
+                      "value": "[\"<binary>\",\"<binary>\"]",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Run in test mode without consuming credits.",
+                        "type": "text/plain"
+                      },
+                      "key": "test",
+                      "value": "<boolean>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "polycount",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Default 200 (cm).",
+                        "type": "text/plain"
+                      },
+                      "key": "height",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "width",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "depth",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "projectID",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "studioID",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": \"string\",\n  \"devID\": \"string\",\n  \"requestID\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "312cc547-365e-47e8-8452-39e66b2a3377",
+              "name": "Invalid payload or headers.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "process"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "devID",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) Level of quality. (This can only be one of standard,high,ultra)",
+                        "type": "text/plain"
+                      },
+                      "key": "LoQ",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Up to 6 image URLs (mutually exclusive with images).",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrls",
+                      "value": "[\"<uri>\",\"<uri>\"]",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Up to 6 uploaded images, 5MB limit each.",
+                        "type": "text/plain"
+                      },
+                      "key": "images",
+                      "value": "[\"<binary>\",\"<binary>\"]",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Run in test mode without consuming credits.",
+                        "type": "text/plain"
+                      },
+                      "key": "test",
+                      "value": "<boolean>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "polycount",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Default 200 (cm).",
+                        "type": "text/plain"
+                      },
+                      "key": "height",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "width",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "depth",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "projectID",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "studioID",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c379b849-0eac-4863-8d70-59bdc63c04b7",
+              "name": "Invalid level of quality.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "process"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-API-Key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "devID",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) Level of quality. (This can only be one of standard,high,ultra)",
+                        "type": "text/plain"
+                      },
+                      "key": "LoQ",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Up to 6 image URLs (mutually exclusive with images).",
+                        "type": "text/plain"
+                      },
+                      "key": "imageUrls",
+                      "value": "[\"<uri>\",\"<uri>\"]",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Up to 6 uploaded images, 5MB limit each.",
+                        "type": "text/plain"
+                      },
+                      "key": "images",
+                      "value": "[\"<binary>\",\"<binary>\"]",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Run in test mode without consuming credits.",
+                        "type": "text/plain"
+                      },
+                      "key": "test",
+                      "value": "<boolean>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "polycount",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Default 200 (cm).",
+                        "type": "text/plain"
+                      },
+                      "key": "height",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "width",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "depth",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "projectID",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "studioID",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Acceptable",
+              "code": 406,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.kaedim3d.com/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-API-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "92f23977-c8bf-4490-b1b4-8da304339f39",
+    "name": "Kaedim Web Assets Generation API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Kaedim Web API lets Enterprise customers integrate Kaedim's AI 2D-to-3D asset generation into internal 3D modelling pipelines and user-facing applications. Submit images (photos, sketches, concept art), poll or receive results via webhook, and download generated models in obj, fbx, glb, gltf, mtl and usd formats. This description is generated by the API Evangelist enrichment pipeline from Kaedim's published Web API documentation; it is not an official Kaedim OpenAPI definition.\n\nContact Support:\n Name: Kaedim Support\n Email: support@kaedim3d.com",
+      "type": "text/plain"
+    }
+  }
+}
