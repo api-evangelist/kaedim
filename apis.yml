@@ -43,6 +43,16 @@ tags:
 - 3D Models
 - Asset Generation
 - Content Generation
+- Machine-Learning
+tags_raw:
+- Company
+- 3D
+- Artificial Intelligence
+- Generative AI
+- Gaming
+- 3D Models
+- Asset Generation
+- Content Generation
 - Machine Learning
 apis:
 - aid: kaedim:kaedim-assets-api
@@ -71,6 +81,8 @@ apis:
   humanURL: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
   baseURL: https://api.kaedim3d.com/api/v1
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
@@ -111,6 +123,8 @@ apis:
   humanURL: https://docs.kaedim3d.com/enterprise-features/custom-integrations/apis/web-api
   baseURL: https://api.kaedim3d.com/api/v1
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
