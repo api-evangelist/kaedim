@@ -1,10 +1,7 @@
 {
   "provider": "kaedim",
   "sources": [
-    "kaedim-assets-api-openapi.yml",
-    "kaedim-auth-api-openapi.yml",
-    "kaedim-generation-api-openapi.yml",
-    "kaedim-webhooks-api-openapi.yml"
+    "_original/kaedim-web-api-openapi.yml"
   ],
   "outputs": [
     "kaedim-assets-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "kaedim-web-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "kaedim-assets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "kaedim-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "kaedim-generation-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "kaedim-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Kaedim Web Assets API
   version: v1
@@ -131,24 +131,6 @@ components:
         studioID:
           type: string
           nullable: true
-    Request:
-      type: object
-      properties:
-        requestID:
-          type: string
-        createdAt:
-          type: string
-        image:
-          type: string
-          format: uri
-        image_tags:
-          type: array
-          items:
-            type: string
-        iterations:
-          type: array
-          items:
-            $ref: '#/components/schemas/Iteration'
     Iteration:
       type: object
       description: A generated model version with downloadable format URLs (links expire after 1 hour).
@@ -171,6 +153,24 @@ components:
         usd:
           type: string
           format: uri
+    Request:
+      type: object
+      properties:
+        requestID:
+          type: string
+        createdAt:
+          type: string
+        image:
+          type: string
+          format: uri
+        image_tags:
+          type: array
+          items:
+            type: string
+        iterations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Iteration'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
