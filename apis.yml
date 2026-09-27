@@ -57,7 +57,7 @@ tags:
 - 3D Models
 - Asset Generation
 - Content Generation
-- Machine-Learning
+- Machine Learning
 tags_raw:
 - Company
 - 3D
@@ -68,6 +68,7 @@ tags_raw:
 - Asset Generation
 - Content Generation
 - Machine Learning
+- Machine-Learning
 apis:
 - aid: kaedim:kaedim-assets-api
   name: Kaedim Assets API

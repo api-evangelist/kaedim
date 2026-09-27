@@ -121,16 +121,6 @@ paths:
                       $ref: '#/components/schemas/Project'
 components:
   schemas:
-    Project:
-      type: object
-      properties:
-        projectID:
-          type: string
-        name:
-          type: string
-        studioID:
-          type: string
-          nullable: true
     Iteration:
       type: object
       description: A generated model version with downloadable format URLs (links expire after 1 hour).
@@ -171,6 +161,16 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Iteration'
+    Project:
+      type: object
+      properties:
+        projectID:
+          type: string
+        name:
+          type: string
+        studioID:
+          type: string
+          nullable: true
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
