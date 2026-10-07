@@ -1,0 +1,46 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.kaedim3d.com/plans
+sources:
+- https://www.kaedim3d.com/plans
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T112025
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Indie
+published: true
+note: Trial shown as $50 (50% off $100), renews to Indie automatically.
+plan_count: 4
+currency: USD
+plans:
+- name: Trial
+  price_text: $50
+  price: 50
+  currency: USD
+  period: one-time
+  unit: 7 day trial
+  included_quota: 5 credits included; Up to 5 geometries
+- name: Indie
+  price_text: $400 /month
+  price: 400
+  currency: USD
+  period: month
+  included_quota: 20 credits included; Up to 20 geometries or 1 complete asset with high quality retopology,
+    UVs and textures; Dedicated support on Discord
+- name: Pro
+  price_text: $1,200 /month
+  price: 1200
+  currency: USD
+  period: month
+  included_quota: 60 credits included; Up to 60 geometries or 3 complete assets with high quality retopology,
+    UVs, and textures; Priority processing; Dedicated support on Discord
+- name: Need more?
+  price_text: Talk to us
+  period: none
