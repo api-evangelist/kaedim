@@ -163,6 +163,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Pricing
+  url: https://www.kaedim3d.com/plans
+- type: Plans
+  url: plans/kaedim-plans-pricing.yml
 - type: DomainSecurity
   url: security/kaedim-domain-security.yml
 - type: Authentication
