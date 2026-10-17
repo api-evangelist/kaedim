@@ -121,24 +121,16 @@ paths:
                       $ref: '#/components/schemas/Project'
 components:
   schemas:
-    Request:
+    Project:
       type: object
       properties:
-        requestID:
+        projectID:
           type: string
-        createdAt:
+        name:
           type: string
-        image:
+        studioID:
           type: string
-          format: uri
-        image_tags:
-          type: array
-          items:
-            type: string
-        iterations:
-          type: array
-          items:
-            $ref: '#/components/schemas/Iteration'
+          nullable: true
     Iteration:
       type: object
       description: A generated model version with downloadable format URLs (links expire after 1 hour).
@@ -161,16 +153,24 @@ components:
         usd:
           type: string
           format: uri
-    Project:
+    Request:
       type: object
       properties:
-        projectID:
+        requestID:
           type: string
-        name:
+        createdAt:
           type: string
-        studioID:
+        image:
           type: string
-          nullable: true
+          format: uri
+        image_tags:
+          type: array
+          items:
+            type: string
+        iterations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Iteration'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
